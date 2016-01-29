@@ -1,0 +1,30 @@
+{
+  "name": "express-app-routing",
+  "version": "0.0.1",
+  "description": "ExpressJs route helpre.",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielemoraschi/express-app-routing"
+  },
+  "keywords": [
+    "express",
+    "expressjs",
+    "middleware"
+  ],
+  "author": "Daniele Moraschi <daniele.moraschi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielemoraschi/express-app-routing/issues"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.21.4",
+    "istanbul": "^0.3.0"
+  },
+  "scripts": {
+    "prepublish": "npm prune",
+    "test": "mocha --reporter spec --bail --check-leaks --require tests/support/should tests/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks --require tests/support/should tests/"
+  }
+}
